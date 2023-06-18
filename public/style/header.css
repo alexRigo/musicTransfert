@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    height: 80px;
+
+    background-color: rgb(0, 0, 0);
+
+    color: white;    
+}
+
+.site-logo {
+    display: flex;
+    margin-left: 80px;
+    
+    align-items: center;
+}
+
+.site-logo h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.site-logo img {
+    position: absolute;
+    height: 140px;
+    left: 202px;
+}
+
+

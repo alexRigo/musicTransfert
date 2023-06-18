@@ -1,0 +1,56 @@
+:root {
+    --purple: #670096;
+    --purple-light: #7e3c9c;
+}
+
+body, button {
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    max-width: 680px;
+    margin: auto;
+}
+
+.big-text {
+    font-size: 44px;
+    text-transform: uppercase;
+}
+
+/* BUTTON */
+
+.button {
+    padding: 20px;
+    
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--purple);
+
+    font-size: 25px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.button:hover {
+    background-color: var(--purple-light);
+
+    transform: scale(1.01);
+}
+
+.button.disabled {
+    background-color: #D8D8D8;
+
+    color: #A3A3A3;
+
+    cursor: default;
+}
+
+
+
+
+
+

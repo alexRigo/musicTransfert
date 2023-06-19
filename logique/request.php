@@ -15,7 +15,7 @@ $spotify_uri_connect = $_ENV['SPOTIFY_URI_CONNECT'];
 
 if($_SESSION['source'] == "spotify") {
 
-    require '../_private/spotifyGlobal.inc.php';
+    /* require '../_private/spotifyGlobal.inc.php'; */
     require '../model/Spotify.php';
 
     $curlServer = new CurlServer("spotify");
@@ -49,7 +49,7 @@ if($_SESSION['source'] == "spotify") {
 
    
 } elseif($_SESSION["source"] == "deezer") {
-    require '../_private/deezerGlobal.inc.php';
+    /* require '../_private/deezerGlobal.inc.php'; */
     require '../model/Deezer.php'; 
     
     $curlServer = new CurlServer("deezer");

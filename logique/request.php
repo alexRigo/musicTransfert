@@ -81,5 +81,3 @@ if($_SESSION['source'] == "spotify") {
 }
 
 include '../vue/dashboard.php';
-
-

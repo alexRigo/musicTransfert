@@ -19,7 +19,7 @@ include '../model/Deezer.php';
 include '../model/Spotify.php';
 
 if ($_SESSION['destination'] == "deezer") {
-    require '../_private/deezerGlobal.inc.php';
+    /* require '../_private/deezerGlobal.inc.php'; */
 
     $curlServer = new CurlServer("deezer");
     $deezer = new Deezer($deezer_app_client_id, $deezer_app_secret, $curlServer);
@@ -60,7 +60,7 @@ if ($_SESSION['destination'] == "deezer") {
 
 } elseif ($_SESSION["destination"] == "spotify") {
    
-    require '../_private/spotifyGlobal.inc.php';
+    /* require '../_private/spotifyGlobal.inc.php'; */
 
     $curlServer = new CurlServer("spotify");
     $spotify = new Spotify($spotify_app_client_id, $spotify_app_secret, $curlServer);

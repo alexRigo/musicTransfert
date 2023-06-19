@@ -8,4 +8,3 @@ if (isset($_SESSION['source'])) {
 } elseif (isset($_SESSION['destination'])) {
     include '../logique/transfert.php';
 }
-include '../logique/transfert.php';

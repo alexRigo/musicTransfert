@@ -1,5 +1,6 @@
 {
     "require": {
-        "beberlei/assert": "^3.3"
+        "beberlei/assert": "^3.3",
+        "vlucas/phpdotenv": "^5.5"
     }
 }

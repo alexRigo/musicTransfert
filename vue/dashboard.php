@@ -1,4 +1,6 @@
-<?php ob_start(); ?>
+<?php 
+ob_start();
+ ?>
 
 <div class="dashboard container">
     <h2 class="big-text">Your playlists</h2>

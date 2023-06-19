@@ -1,4 +1,14 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+$deezer_app_client_id = $_ENV['DEEZER_APP_CLIENT_ID'];
+$deezer_redirect_uri = $_ENV['DEEZER_REDIRECT_URI'];
+$spotify_app_client_id = $_ENV['SPOTIFY_APP_CLIENT_ID'];
+$spotify_redirect_uri = $_ENV['SPOTIFY_REDIRECT_URI'];
+$spotify_uri_connect = $_ENV['SPOTIFY_URI_CONNECT'];
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -6,7 +16,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 if (isset($_SESSION["source"]) || isset($_SESSION["destination"])) {
     if($_SESSION["source"] == "deezer" || $_SESSION["destination"] == "deezer"){
-        include '../_private/deezerGlobal.inc.php'; 
+        /* include '../_private/deezerGlobal.inc.php';  */
     ?>
         <script>
     
@@ -21,7 +31,7 @@ if (isset($_SESSION["source"]) || isset($_SESSION["destination"])) {
     
         <?php
         } else if ($_SESSION["source"] == "spotify" || $_SESSION["destination"] == "spotify"){
-            include '../_private/spotifyGlobal.inc.php';
+            /* include '../_private/spotifyGlobal.inc.php'; */
         ?>
     
         <script>

@@ -12,12 +12,12 @@ if(isset($_GET["playlist"]) && !empty($_GET["playlist"])) {
         $_SESSION["source"] = null;
         $_SESSION["destination"] = "spotify";
     
-        include './_private/spotifyGlobal.inc.php';
+        /* include './_private/spotifyGlobal.inc.php'; */
     } else if ($_SESSION["source"] == "spotify") {
         $_SESSION["source"] = null;
         $_SESSION["destination"] = "deezer";
 
-        include './_private/deezerGlobal.inc.php';
+       /*  include './_private/deezerGlobal.inc.php'; */
     } 
 
     include './connexion.php'; 

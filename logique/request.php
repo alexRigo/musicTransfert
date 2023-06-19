@@ -1,10 +1,10 @@
 <?php
 require '../model/CurlServer.php';
 
-require_once __DIR__ . '/../vendor/autoload.php';
+/* require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
-$dotenv->load();
+$dotenv->load(); */
 $deezer_app_client_id = $_ENV['DEEZER_APP_CLIENT_ID'];
 $deezer_redirect_uri = $_ENV['DEEZER_REDIRECT_URI'];
 $deezer_app_secret = $_ENV['DEEZER_APP_SECRET'];

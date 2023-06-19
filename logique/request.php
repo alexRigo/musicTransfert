@@ -19,7 +19,7 @@ if($_SESSION['source'] == "spotify") {
     require '../model/Spotify.php';
 
     $curlServer = new CurlServer("spotify");
-    $spotify = new Spotify($spotify_app_client_id, $spotify_app_secret, $curlServer);
+    $spotify = new Spotify($spotify_app_client_id, $spotify_app_secret, $curlServer, $spotify_redirect_uri);
    
     $playlistsAndTracks = [];
 

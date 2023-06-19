@@ -63,7 +63,7 @@ if ($_SESSION['destination'] == "deezer") {
     /* require '../_private/spotifyGlobal.inc.php'; */
 
     $curlServer = new CurlServer("spotify");
-    $spotify = new Spotify($spotify_app_client_id, $spotify_app_secret, $curlServer);
+    $spotify = new Spotify($spotify_app_client_id, $spotify_app_secret, $curlServer, $spotify_redirect_uri);
 
     foreach($_SESSION["playlist"] as $playlist) {
         $playlistName = $playlist["playlistName"];

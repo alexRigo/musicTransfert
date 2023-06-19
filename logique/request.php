@@ -8,7 +8,7 @@ if($_SESSION['source'] == "spotify") {
     require '../model/Spotify.php';
 
     $curlServer = new CurlServer("spotify");
-    $spotify = new Spotify($__app_client_id, $__app_secret, $curlServer);
+    $spotify = new Spotify($__spotify_app_client_id, $__spotify_app_secret, $curlServer);
    
     $playlistsAndTracks = [];
 
@@ -42,7 +42,7 @@ if($_SESSION['source'] == "spotify") {
     require '../model/Deezer.php'; 
     
     $curlServer = new CurlServer("deezer");
-    $deezer = new Deezer($__app_client_id, $__app_secret, $curlServer);
+    $deezer = new Deezer($__deezer_app_client_id, $__deezer_app_secret, $curlServer);
 
     $playlistsAndTracks = [];
 

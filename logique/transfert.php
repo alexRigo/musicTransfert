@@ -12,7 +12,7 @@ if ($_SESSION['destination'] == "deezer") {
     require '../_private/deezerGlobal.inc.php';
 
     $curlServer = new CurlServer("deezer");
-    $deezer = new Deezer($__app_client_id, $__app_secret, $curlServer);
+    $deezer = new Deezer($__deezer_app_client_id, $__deezer_app_secret, $curlServer);
 
     foreach($_SESSION["playlist"] as $playlist) {
     	$playlistName = $playlist["playlistName"];
@@ -53,7 +53,7 @@ if ($_SESSION['destination'] == "deezer") {
     require '../_private/spotifyGlobal.inc.php';
 
     $curlServer = new CurlServer("spotify");
-    $spotify = new Spotify($__app_client_id, $__app_secret, $curlServer);
+    $spotify = new Spotify($__spotify_app_client_id, $__spotify_app_secret, $curlServer);
 
     foreach($_SESSION["playlist"] as $playlist) {
         $playlistName = $playlist["playlistName"];
@@ -69,8 +69,6 @@ if ($_SESSION['destination'] == "deezer") {
             foreach($playlist["tracks"] as $track) {
                 try {
                     $spotifyTrackUri = $spotify->findIdTrack($track["name"], $track["artist"], $track["album"], $playlistName);
-              /*       var_dump($spotifyTrackUri);
-                    die; */
                 } catch (Exception $e) {
                     echo $e->getMessage();
                     die;

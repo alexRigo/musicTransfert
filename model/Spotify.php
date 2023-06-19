@@ -5,19 +5,19 @@ class Spotify
     protected $token;
     private $curlServer;
 
-    public function __construct($__app_client_id, $__app_secret, $curlServer)
+    public function __construct($__app_client_id, $__app_secret, $curlServer, $spotify_redirect_uri)
     {
-        $this->token = $this->getToken($__app_client_id, $__app_secret);
+        $this->token = $this->getToken($__app_client_id, $__app_secret, $spotify_redirect_uri);
         $this->curlServer = $curlServer;
     }
 
-    public function getToken($__app_client_id, $__app_secret) 
+    public function getToken($__app_client_id, $__app_secret, $spotify_redirect_uri) 
     {
         $_SESSION["code"] = $_GET["code"];
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://accounts.spotify.com/api/token');
         curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, 'grant_type=authorization_code&code='. $_SESSION['code'] . '&redirect_uri=http://localhost:8000/callback');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, 'grant_type=authorization_code&code='. $_SESSION['code'] . '&redirect_uri=' . $spotify_redirect_uri);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: ' . 'Basic ' . base64_encode("$__app_client_id:$__app_secret"), 'Content-Type: application/x-www-form-urlencoded'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $server_output = curl_exec($ch);
